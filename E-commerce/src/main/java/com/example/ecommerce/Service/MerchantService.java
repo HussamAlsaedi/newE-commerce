@@ -31,9 +31,10 @@ public class MerchantService {
         for (int i = 0; i < merchants.size(); i++) {
             if (merchants.get(i).getId() == index){
                 merchants.remove(i);
+                return true;
             }
         }
-        return true;
+        return false;
     }
 
 }

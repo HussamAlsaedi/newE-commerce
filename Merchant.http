@@ -8,5 +8,19 @@ Content-Type: application/json
 
 {
 "id": 1,
-  "name": "uu"
+  "name": "uu3"
 }
+
+###
+
+PUT localhost:8082/api/v1/merchant/update/1
+Content-Type: application/json
+
+{
+  "id": 2,
+  "name": "rrr"
+}
+
+###
+
+DELETE http://localhost:8082/api/v1/merchant/delete/2

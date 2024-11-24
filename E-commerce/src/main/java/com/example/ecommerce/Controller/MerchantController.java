@@ -30,11 +30,31 @@ public class MerchantController {
     @PostMapping("/add")
     public ResponseEntity<ApiResponse> addMerchant(@RequestBody @Valid Merchant merchant, Errors errors) {
        if (errors.hasErrors()) {
-           return ResponseEntity.status(400).body(new ApiResponse("Invalid Merchant"));
+           return ResponseEntity.status(400).body(new ApiResponse(errors.getAllErrors().get(0).getDefaultMessage()));
        }
             merchantService.addMerchants(merchant);
            return ResponseEntity.status(200).body(new ApiResponse("Merchant Added"));
        }
 
-    }
+       @PutMapping("/update/{index}")
+       public ResponseEntity<ApiResponse> updateMerchant(@PathVariable int index,@RequestBody @Valid Merchant merchant, Errors errors) {
+        if (errors.hasErrors()) {
+            return ResponseEntity.status(400).body(new ApiResponse(errors.getAllErrors().get(0).getDefaultMessage()));
+        }
+            if (merchantService.updateMerchant(index, merchant)) {
+                return ResponseEntity.status(200).body(new ApiResponse("Merchant Updated"));
+            }
+            return ResponseEntity.status(404).body(new ApiResponse("Merchant Not Found"));
+       }
+
+       @DeleteMapping("/delete/{index}")
+      public ResponseEntity<ApiResponse> deleteMerchant(@PathVariable int index ) {
+
+       if(merchantService.deleteMerchant(index)){
+        return ResponseEntity.status(200).body(new ApiResponse("Merchant Deleted"));
+      }
+      return ResponseEntity.status(404).body(new ApiResponse("Merchant Not Found"));
+      }
+
+ }
 
