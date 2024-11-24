@@ -7,7 +7,7 @@ POST http://localhost:8082/api/v1/product/add
 Content-Type: application/json
 
 {
-  "id":6,
+  "id":688,
   "name": "Laptop",
   "price": 1200.50,
   "categoryID": "C001"
