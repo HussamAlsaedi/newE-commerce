@@ -1,0 +1,12 @@
+###
+GET  http://localhost:8082/api/v1/merchant/get
+
+###
+
+POST localhost:8082/api/v1/merchant/add
+Content-Type: application/json
+
+{
+"id": 1,
+  "name": "uu"
+}
