@@ -1,0 +1,31 @@
+####
+GET http://localhost:8082/api/v1/product/get
+
+###
+
+POST http://localhost:8082/api/v1/product/add
+Content-Type: application/json
+
+{
+  "id":6,
+  "name": "Laptop",
+  "price": 1200.50,
+  "categoryID": "C001"
+}
+
+
+
+###
+PUT http://localhost:8082/api/v1/product/update/2
+Content-Type: application/json
+
+
+{
+  "id": 3,
+  "name": "phone"
+
+}
+
+###
+
+DELETE http://localhost:8082/api/v1/product/delete/6

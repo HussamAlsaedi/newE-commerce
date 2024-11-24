@@ -1,0 +1,22 @@
+###
+GET http://localhost:8082/api/v1/category/get
+
+###
+
+POST http://localhost:8082/api/v1/category/add
+Content-Type: application/json
+
+
+{
+"name": "Action"
+,"id": 1
+}
+
+###
+PUT http://localhost:8082/api/v1/category/update/1
+Content-Type: application/json
+
+{
+  "name": "Sport"
+,"id": 3
+}

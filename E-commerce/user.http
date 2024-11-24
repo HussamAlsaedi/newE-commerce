@@ -1,0 +1,34 @@
+###
+GET http://localhost:8082/api/v1/user/get
+
+###
+
+POST http://localhost:8082/api/v1/user/add
+Content-Type: application/json
+
+{
+"id": 2,
+  "username": "halsaedi",
+  "email": "wer@w.com",
+  "balance": 202.2,
+  "password": "1234562Ww",
+  "role": "Admin"
+}
+
+###
+PUT http://localhost:8082/api/v1/user/update/1
+Content-Type: application/json
+
+
+{
+  "id": 5,
+  "username": "halsaedi",
+  "email": "wer@w.com",
+  "balance": 202.2,
+  "password": "1234562Ww",
+  "role": "Admin"
+}
+
+###
+
+DELETE http://localhost:8082/api/v1/user/delete/5
