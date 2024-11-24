@@ -13,14 +13,14 @@ public class MerchantStock {
     @NotNull(message = "Id must be not empty.")
     private int id;
 
-    @NotEmpty(message = "productId must be not empty")
+    @NotNull(message = "productId must be not empty")
     private int productId;
 
     @NotNull(message = "merchantId must be  not empty")
     private int merchantId;
 
     @NotNull(message = "Stock must be  not empty")
-    @Min(value = 10 ,message = "must not be empty, have to be more than 10 at start).")
+    @Min(value = 10 ,message = "stock must not be empty, have to be more than 10 at start).")
     private int stock;
 
 }

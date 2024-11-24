@@ -7,7 +7,7 @@ import java.util.ArrayList;
 @Service
 public class MerchantService {
 
-   public ArrayList<Merchant> merchants = new ArrayList<>();
+   ArrayList<Merchant> merchants = new ArrayList<>();
 
     public ArrayList<Merchant> getMerchants() {
         return merchants;

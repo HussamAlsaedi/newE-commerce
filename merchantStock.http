@@ -1,0 +1,30 @@
+###
+GET http://localhost:8082/api/v1/merchantStock/get
+
+###
+
+POST http://localhost:8082/api/v1/merchantStock/add
+Content-Type: application/json
+
+{
+"id": 2,
+  "merchantId": 2,
+  "productId": 5,
+  "stock": 1234567890
+}
+
+###
+
+PUT http://localhost:8082/api/v1/merchantStock/update/1
+Content-Type: application/json
+
+{
+  "id": 5,
+  "merchantId": 2,
+  "productId": 5,
+  "stock": 1234567890
+}
+
+###
+
+DELETE http://localhost:8082/api/v1/merchantStock/delete/5
